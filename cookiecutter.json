@@ -1,0 +1,11 @@
+{
+  "name": "battlecloud",
+  "email": "battlecloud@khast3x.club",
+  "title": "myproject",
+  "description": "bliblabla",
+  "dockerhubimage": "battlec0ud/tool",
+  "logo_url": "https://i.imgur.com/XCiyrP0.png",
+  "interactive": ["no", "yes"],
+  "ports": ["none", "web", "ssh", "exotic"],
+  "categorie": "offensive"
+}
