@@ -1,20 +1,29 @@
-{
+[{
   "type": "container",
-  "title": "{{ cookiecutter.title }}",
-  "description": "{{ cookiecutter.description }}",
-  "logo": "{{ cookiecutter.logo_url }}",
-  "image": "{{ cookiecutter.dockerhubimage }}",
-  "categories": "{{ cookiecutter.categorie }}",
+  "title": "{{cookiecutter.title}}",
+  "name": "{{cookiecutter.title}}",
+  "description": "{{cookiecutter.description}}",
+  "logo": "{{cookiecutter.logo_url}}",
+  "image": "{{cookiecutter.dockerhubimage}}",
+  "categories": "{{cookiecutter.categorie}}",
   "network": "haknet",
   {% if cookiecutter.ports == "none" %}
   {% elif cookiecutter.ports == "web" %}
   "ports": [
     "80/tcp",
     "443/tcp"
-  ]
+  ],
   {% elif cookiecutter.ports == "ssh" %}
-  "ports": ["21/tcp"]
+  "ports": ["21/tcp"],
   {% elif cookiecutter.ports == "exotic" %}
-  "ports": ["55555/tcp"]
+  "ports": ["55555/tcp"],
   {% endif %}
+  "env":         [
+  {
+    "name":      "USER_INPUT",
+    "label":     "Input to send",
+    "set":      ""
+  }
+  ]
 }
+]
